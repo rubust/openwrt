@@ -629,6 +629,17 @@ define Device/hiwifi_hc5962
 endef
 TARGET_DEVICES += hiwifi_hc5962
 
+define Device/hylink_hyg221
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 15552k
+  DEVICE_VENDOR := HYLINK
+  DEVICE_MODEL := HYG221
+  DEVICE_PACKAGES := kmod-mt7603 kmod-mt7613 kmod-usb3 \
+	kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += hylink_hyg221
+
 define Device/iodata_wn-ax1167gr
   $(Device/dsa-migration)
   $(Device/uimage-lzma-loader)
