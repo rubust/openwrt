@@ -37,7 +37,7 @@ subversion libz-dev libc-dev rsync which
 2. Run `./scripts/feeds install -a` to install symlinks for all obtained
    packages into package/feeds/
 
-3. Run `make menuconfig` to select your preferred configuration for the
+3. Run `cp defconfigs/mt7621_hyg221_defconfig .config` to select your hyg221 configuration for the
    toolchain, target system & firmware packages.
 
 4. Run `make` to build your firmware. This will download all sources, build the
