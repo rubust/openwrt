@@ -1,0 +1,10 @@
+[ "$(uci -q get network.wan.proto)" != "ncm" ] || exit 0
+
+uci -q batch <<-EOF >/dev/null
+	set network.wan.proto=ncm
+	set network.wan.device=/dev/ttyUSB0
+	commit network
+EOF
+
+exit 0
+
